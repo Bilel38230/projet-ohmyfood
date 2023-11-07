@@ -1,0 +1,137 @@
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  background-color: #F6F6F6;
+  padding: 39px 0 57px 0;
+  text-align: center;
+}
+.hero h2 {
+  margin: 0 58px 12px 42px;
+}
+.hero p {
+  margin: 0 26px 27px 34px;
+  font-size: 18px;
+  color: #353535;
+}
+.hero button {
+  width: 13.63rem;
+  height: 3.13rem;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  border: none;
+  color: white;
+}
+.hero button:hover {
+  background-image: linear-gradient(to top, #a16be0, #ff93e1);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.functioning {
+  margin: 48px 20px 43px 20px;
+}
+.functioning h2 {
+  margin-bottom: 26px;
+}
+.functioning button {
+  width: 96%;
+  height: 4.52rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 25px 12.5px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  background-color: #F6F6F6;
+  border: none;
+}
+.functioning button .i-mobile {
+  margin-right: 27px;
+  margin-left: 9.47px;
+  color: #7E7E7E;
+}
+.functioning button .i-list {
+  margin-right: 23px;
+  margin-left: 10.49px;
+  color: #7E7E7E;
+}
+.functioning button .i-store {
+  margin-right: 20px;
+  margin-left: 11.49px;
+  color: #9356DC;
+}
+.functioning button span {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356DC;
+  border-radius: 50%;
+  font-size: 14.18px;
+  font-weight: 500;
+  position: relative;
+  right: 12.51px;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+  padding: 54px 17px 66px 17px;
+}
+.restaurants h2 {
+  margin: 0 0 20px 3px;
+}
+.restaurants .cards-container {
+  display: grid;
+  gap: 18px;
+}
+.restaurants .cards-container .card {
+  position: relative;
+  background-color: white;
+  border-radius: 15px;
+  color: black;
+  padding-bottom: 16px;
+  text-decoration: none;
+}
+.restaurants .cards-container .card span {
+  width: 80px;
+  height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  color: #008766;
+  position: absolute;
+  top: 13px;
+  right: 12px;
+}
+.restaurants .cards-container .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 231px;
+  border-radius: 15px 15px 0 0;
+  margin-bottom: 14px;
+}
+.restaurants .cards-container .card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.restaurants .cards-container .card i {
+  position: absolute;
+  top: 275px;
+  right: 25px;
+}/*# sourceMappingURL=indexMain.css.map */

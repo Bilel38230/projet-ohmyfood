@@ -1,0 +1,27 @@
+@mixin flex-center($height, $horizontal-position : center) {
+    height: $height;
+    display: flex;
+    justify-content: $horizontal-position;
+    align-items: center;
+}
+
+@mixin txt-format($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin font-logo {
+    font-family: 'Shrikhand';
+    font-style: italic;
+}
+
+@mixin txt-container($height, $margin) {
+    height: $height;
+    margin: $margin;
+}
+
+@mixin icon-button($marginLeft, $marginRight, $color) {
+    margin-right: $marginRight;
+    margin-left: $marginLeft;
+    color: $color;
+}
