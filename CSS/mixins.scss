@@ -15,11 +15,6 @@
     font-style: italic;
 }
 
-@mixin txt-container($height, $margin) {
-    height: $height;
-    margin: $margin;
-}
-
 @mixin icon-button($marginLeft, $marginRight, $color) {
     margin-right: $marginRight;
     margin-left: $marginLeft;

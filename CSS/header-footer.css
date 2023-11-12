@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+}
+
+h1 {
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-size: 30px;
+  font-weight: 400;
+  color: #101010;
+}
+
+.txt-component {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.text-nav {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.logo-container {
+  height: 3.94rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .logo-container {
+    height: 6rem;
+  }
+}
+
+.location {
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: #EAEAEA;
+  height: 3.13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  color: #353535;
+}
+
+footer {
+  background-color: #353535;
+  padding: 22px 25px;
+}
+@media (min-width: 768px) {
+  footer {
+    height: 54px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 16px;
+    padding: 30px 25px;
+  }
+}
+footer h1 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 17px;
+}
+@media (min-width: 768px) {
+  footer h1 {
+    margin-bottom: 0;
+  }
+}
+footer nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+@media (min-width: 768px) {
+  footer nav {
+    flex-direction: row;
+    height: 20px;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+footer nav a {
+  color: white;
+}
+footer nav a .i-utensils {
+  margin-right: 11.5px;
+}
+footer nav a .i-handshake {
+  margin-right: 7px;
+}
+footer nav .txt-component {
+  width: 190px;
+}
+footer nav .text-nav {
+  width: 130px;
+}/*# sourceMappingURL=header-footer.css.map */

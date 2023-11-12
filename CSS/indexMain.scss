@@ -11,6 +11,13 @@ p {
 
 a {
     text-decoration: none;
+    color: black;
+}
+
+svg {
+    position: absolute;
+    bottom: 33px;
+    right: 25px;
 }
 
 .hero {
@@ -18,12 +25,20 @@ a {
     padding: 39px 0 57px 0;
     text-align: center;
 
+    @media (min-width: 768px) {
+        padding: 30px 0;
+    }
+
     h2 {
-        margin: 0 58px 12px 42px;
+        margin: 0 50px 12px 50px;
+
+        @media (min-width: 768px) {
+            font-size: 40px;
+        }
     }
 
     p {
-        margin: 0 26px 27px 34px;
+        margin: 0 30px 27px 30px;
         font-size: 18px;
         color: $txt-color;
     }
@@ -36,6 +51,7 @@ a {
         background-image: linear-gradient(to top, $primary-color, $secondary-color);
         border: none;
         color: white;
+        transition: all 500ms ease-in-out;
 
         &:hover {
             background-image: linear-gradient(to top, lighten($primary-color, 5%), lighten($secondary-color, 5%));
@@ -47,54 +63,85 @@ a {
 .functioning {
     margin: 48px 20px 43px 20px;
 
+    @media (min-width: 768px) {
+        margin: 50px 180px 50px 180px;
+    }
+
     h2 {
         margin-bottom: 26px;
     }
 
-    button {
-        width: 96%;
-        @include flex-center(4.52rem, flex-start);
-        margin: 0 0 25px 12.5px;
-        border-radius: 20px;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-        background-color: $background-color;
-        border: none;
-
-        .i-mobile {
-            @include icon-button(9.47px, 27px, $icon-color);
+    .buttons-container {
+        @media (min-width: 1024px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
         }
 
-        .i-list {
-            @include icon-button(10.49px, 23px, $icon-color);
-        }
+        button {
+            width: calc(100% - 20px);
+            @include flex-center(4.52rem, flex-start);
+            margin: 0 0 25px 12.5px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+            background-color: $background-color;
+            border: none;
 
-        .i-store {
-            @include icon-button(11.49px, 20px, $primary-color);
-        }
+            @media (min-width: 768px) {
+                width: 100%;
+            }
 
-        span {
-            width: 24px;
-            @include flex-center(24px);
-            background-color: $primary-color;
-            border-radius: 50%;
-            @include txt-format(14.18px, 500);
-            position: relative;
-            right: 12.51px;
+            .i-mobile {
+                @include icon-button(9.47px, 27px, $icon-color);
+            }
+
+            .i-list {
+                @include icon-button(10.49px, 23px, $icon-color);
+            }
+
+            .i-store {
+                @include icon-button(11.49px, 20px, $primary-color);
+            }
+
+            span {
+                width: 24px;
+                @include flex-center(24px);
+                background-color: $primary-color;
+                border-radius: 50%;
+                @include txt-format(14.18px, 500);
+                position: relative;
+                right: 12.51px;
+                color: white;
+            }
         }
     }
 }
 
 .restaurants {
     background-color: $background-color;
-    padding: 54px 17px 66px 17px;
+    padding: 54px 20px 66px 20px;
+
+    @media (min-width: 768px) {
+        padding: 30px 180px 30px 180px;
+    }
 
     h2 {
-        margin: 0 0 20px 3px;
+        margin-bottom: 20px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 28px;
+        }
     }
 
     .cards-container {
         display: grid;
         gap: 18px;
+
+        @media (min-width: 1024px) {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 100px;
+            row-gap: 50px;
+        }
 
         .card {
             position: relative;
@@ -102,13 +149,13 @@ a {
             border-radius: 15px;
             color: black;
             padding-bottom: 16px;
-            text-decoration: none;
 
             span {
                 width: 80px;
                 @include flex-center(29px);
                 background-color: #99E2D0;
                 color: #008766;
+                @include txt-format(14px, 500);
                 position: absolute;
                 top: 13px;
                 right: 12px;
@@ -119,18 +166,29 @@ a {
                 width: 100%;
                 height: 231px;
                 border-radius: 15px 15px 0 0;
-                margin-bottom: 14px;
+                margin-bottom: 15px;
             }
 
             h3 {
                 @include txt-format(18px, 700);
-                margin-bottom: 5px;
+                margin: 0 0 5px 16px;
             }
 
-            i {
-                position: absolute;
-                top: 275px;
-                right: 25px;
+            p {
+                margin-left: 16px;
+            }
+
+            .regular-heart {
+                &:hover+.solid-heart {
+                    transform: scale(1);
+                }
+            }
+
+            .solid-heart {
+                fill: url(#icon);
+                transform-origin: top;
+                transform: scale(0);
+                transition: transform 300ms ease-in-out;
             }
         }
     }

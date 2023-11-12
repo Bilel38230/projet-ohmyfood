@@ -10,6 +10,13 @@ p {
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+svg {
+  position: absolute;
+  bottom: 33px;
+  right: 25px;
 }
 
 .hero {
@@ -17,11 +24,21 @@ a {
   padding: 39px 0 57px 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .hero {
+    padding: 30px 0;
+  }
+}
 .hero h2 {
-  margin: 0 58px 12px 42px;
+  margin: 0 50px 12px 50px;
+}
+@media (min-width: 768px) {
+  .hero h2 {
+    font-size: 40px;
+  }
 }
 .hero p {
-  margin: 0 26px 27px 34px;
+  margin: 0 30px 27px 30px;
   font-size: 18px;
   color: #353535;
 }
@@ -33,6 +50,7 @@ a {
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   border: none;
   color: white;
+  transition: all 500ms ease-in-out;
 }
 .hero button:hover {
   background-image: linear-gradient(to top, #a16be0, #ff93e1);
@@ -42,11 +60,23 @@ a {
 .functioning {
   margin: 48px 20px 43px 20px;
 }
+@media (min-width: 768px) {
+  .functioning {
+    margin: 50px 180px 50px 180px;
+  }
+}
 .functioning h2 {
   margin-bottom: 26px;
 }
-.functioning button {
-  width: 96%;
+@media (min-width: 1024px) {
+  .functioning .buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+  }
+}
+.functioning .buttons-container button {
+  width: calc(100% - 20px);
   height: 4.52rem;
   display: flex;
   justify-content: flex-start;
@@ -57,22 +87,27 @@ a {
   background-color: #F6F6F6;
   border: none;
 }
-.functioning button .i-mobile {
+@media (min-width: 768px) {
+  .functioning .buttons-container button {
+    width: 100%;
+  }
+}
+.functioning .buttons-container button .i-mobile {
   margin-right: 27px;
   margin-left: 9.47px;
   color: #7E7E7E;
 }
-.functioning button .i-list {
+.functioning .buttons-container button .i-list {
   margin-right: 23px;
   margin-left: 10.49px;
   color: #7E7E7E;
 }
-.functioning button .i-store {
+.functioning .buttons-container button .i-store {
   margin-right: 20px;
   margin-left: 11.49px;
   color: #9356DC;
 }
-.functioning button span {
+.functioning .buttons-container button span {
   width: 24px;
   height: 24px;
   display: flex;
@@ -84,18 +119,37 @@ a {
   font-weight: 500;
   position: relative;
   right: 12.51px;
+  color: white;
 }
 
 .restaurants {
   background-color: #F6F6F6;
-  padding: 54px 17px 66px 17px;
+  padding: 54px 20px 66px 20px;
+}
+@media (min-width: 768px) {
+  .restaurants {
+    padding: 30px 180px 30px 180px;
+  }
 }
 .restaurants h2 {
-  margin: 0 0 20px 3px;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .restaurants h2 {
+    margin-bottom: 28px;
+  }
 }
 .restaurants .cards-container {
   display: grid;
   gap: 18px;
+}
+@media (min-width: 1024px) {
+  .restaurants .cards-container {
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    row-gap: 50px;
+  }
 }
 .restaurants .cards-container .card {
   position: relative;
@@ -103,7 +157,6 @@ a {
   border-radius: 15px;
   color: black;
   padding-bottom: 16px;
-  text-decoration: none;
 }
 .restaurants .cards-container .card span {
   width: 80px;
@@ -113,6 +166,8 @@ a {
   align-items: center;
   background-color: #99E2D0;
   color: #008766;
+  font-size: 14px;
+  font-weight: 500;
   position: absolute;
   top: 13px;
   right: 12px;
@@ -123,15 +178,22 @@ a {
   width: 100%;
   height: 231px;
   border-radius: 15px 15px 0 0;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 }
 .restaurants .cards-container .card h3 {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin: 0 0 5px 16px;
 }
-.restaurants .cards-container .card i {
-  position: absolute;
-  top: 275px;
-  right: 25px;
+.restaurants .cards-container .card p {
+  margin-left: 16px;
+}
+.restaurants .cards-container .card .regular-heart:hover + .solid-heart {
+  transform: scale(1);
+}
+.restaurants .cards-container .card .solid-heart {
+  fill: url(#icon);
+  transform-origin: top;
+  transform: scale(0);
+  transition: transform 300ms ease-in-out;
 }/*# sourceMappingURL=indexMain.css.map */
