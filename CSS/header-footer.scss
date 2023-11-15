@@ -27,6 +27,12 @@ h1 {
     @media (min-width: 768px) {
         height: 6rem;
     }
+
+    .i-arrow {
+        color: $txt-color;
+        position: absolute;
+        left: 17px;
+    }
 }
 
 .location {
@@ -35,6 +41,10 @@ h1 {
     @include flex-center(3.13rem);
     gap: 17px;
     color: $txt-color;
+
+    @media (min-width: 768px) {
+        box-shadow: none;
+    }
 }
 
 footer {
@@ -61,10 +71,7 @@ footer {
     }
 
     nav {
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-
+        @include flex-column(7px);
         @media (min-width: 768px) {
             flex-direction: row;
             height: 20px;

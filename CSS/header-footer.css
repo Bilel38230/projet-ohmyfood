@@ -33,6 +33,11 @@ h1 {
     height: 6rem;
   }
 }
+.logo-container .i-arrow {
+  color: #353535;
+  position: absolute;
+  left: 17px;
+}
 
 .location {
   box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.15);
@@ -43,6 +48,11 @@ h1 {
   align-items: center;
   gap: 17px;
   color: #353535;
+}
+@media (min-width: 768px) {
+  .location {
+    box-shadow: none;
+  }
 }
 
 footer {
