@@ -1,3 +1,24 @@
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0.5;
+    height: 100%;
+  }
+  100% {
+    opacity: 0;
+    height: 0px;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotateX(-360deg);
+  }
+  70% {
+    transform: rotateX(0);
+  }
+}
 h2 {
   font-size: 24px;
   font-weight: 700;
@@ -34,8 +55,14 @@ svg {
 }
 .loading-container .loading {
   color: #99E2D0;
-  font-size: 84px;
+  font-size: 60px;
   text-align: center;
+  display: inline-grid;
+}
+@media (min-width: 768px) {
+  .loading-container .loading {
+    display: block;
+  }
 }
 .loading-container .loading .span {
   display: inline-block;
@@ -66,27 +93,6 @@ svg {
   animation-delay: 0.8s;
 }
 
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0.5;
-    height: 100%;
-  }
-  100% {
-    opacity: 0;
-    height: 0px;
-  }
-}
-@keyframes loading {
-  0% {
-    transform: rotateX(-360deg);
-  }
-  70% {
-    transform: rotateX(0);
-  }
-}
 .hero {
   background-color: #F6F6F6;
   padding: 39px 0 57px 0;

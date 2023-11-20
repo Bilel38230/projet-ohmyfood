@@ -1,6 +1,33 @@
 @import 'mixins.scss';
 @import 'vars.scss';
 
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0.5;
+        height: 100%;
+    }
+
+    100% {
+        opacity: 0;
+        height: 0px;
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: rotateX(-360deg);
+    }
+
+    70% {
+        transform: rotateX(0);
+    }
+}
+
 h2 {
     @include txt-format(24px, 700);
 }
@@ -35,8 +62,13 @@ svg {
 
     .loading {
         color: $green-icon;
-        font-size: 84px;
+        font-size: 60px;
         text-align: center;
+        display: inline-grid;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
 
         .span {
             display: inline-block;
@@ -48,32 +80,6 @@ svg {
                 }
             }
         }
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-
-    99% {
-        opacity: 0.5;
-        height: 100%;
-    }
-
-    100% {
-        opacity: 0;
-        height: 0px;
-    }
-}
-
-@keyframes loading {
-    0% {
-        transform: rotateX(-360deg);
-    }
-
-    70% {
-        transform: rotateX(0);
     }
 }
 
