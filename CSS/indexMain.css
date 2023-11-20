@@ -19,6 +19,74 @@ svg {
   right: 25px;
 }
 
+.loading-container {
+  position: fixed;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  animation: fadeOut 3s;
+  animation-fill-mode: forwards;
+}
+.loading-container .loading {
+  color: #99E2D0;
+  font-size: 84px;
+  text-align: center;
+}
+.loading-container .loading .span {
+  display: inline-block;
+  animation: loading 1s infinite;
+}
+.loading-container .loading .span-1 {
+  animation-delay: 0.1s;
+}
+.loading-container .loading .span-2 {
+  animation-delay: 0.2s;
+}
+.loading-container .loading .span-3 {
+  animation-delay: 0.3s;
+}
+.loading-container .loading .span-4 {
+  animation-delay: 0.4s;
+}
+.loading-container .loading .span-5 {
+  animation-delay: 0.5s;
+}
+.loading-container .loading .span-6 {
+  animation-delay: 0.6s;
+}
+.loading-container .loading .span-7 {
+  animation-delay: 0.7s;
+}
+.loading-container .loading .span-8 {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0.5;
+    height: 100%;
+  }
+  100% {
+    opacity: 0;
+    height: 0px;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotateX(-360deg);
+  }
+  70% {
+    transform: rotateX(0);
+  }
+}
 .hero {
   background-color: #F6F6F6;
   padding: 39px 0 57px 0;

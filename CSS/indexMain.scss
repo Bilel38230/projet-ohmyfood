@@ -20,6 +20,63 @@ svg {
     right: 25px;
 }
 
+.loading-container {
+    position: fixed;
+    background-image: linear-gradient(to top, $primary-color, $secondary-color);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    animation: fadeOut 3s;
+    animation-fill-mode: forwards;
+
+    .loading {
+        color: $green-icon;
+        font-size: 84px;
+        text-align: center;
+
+        .span {
+            display: inline-block;
+            animation: loading 1s infinite;
+
+            @for $i from 1 through 8 {
+                &-#{$i} {                 
+                    animation-delay: calc($i * 0.1s);
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0.5;
+        height: 100%;
+    }
+
+    100% {
+        opacity: 0;
+        height: 0px;
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: rotateX(-360deg);
+    }
+
+    70% {
+        transform: rotateX(0);
+    }
+}
+
 .hero {
     background-color: $background-color;
     padding: 39px 0 57px 0;

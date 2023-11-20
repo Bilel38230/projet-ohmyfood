@@ -1,3 +1,11 @@
+@keyframes load-plat {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 svg {
   position: absolute;
   right: 24px;
@@ -18,18 +26,27 @@ h2 {
 h3 {
   font-size: 18px;
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 p {
   font-size: 15px;
   font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+}
+
+.i-check {
+  color: #99E2D0;
 }
 
 main {
   position: relative;
   padding-top: 220px;
 }
-main img {
+main .img-main {
   display: block;
   position: absolute;
   top: 0;
@@ -86,15 +103,88 @@ main .menu section {
   flex-direction: column;
   gap: 12px;
 }
-main .menu section div {
+main .menu section .plat-container {
   background-color: white;
-  padding: 15px;
   border-radius: 15px;
+  display: flex;
+  overflow: hidden;
 }
-main .menu section div span {
+main .menu section .plat-container:hover .icon-div {
+  margin-right: 0;
+}
+main .menu section .plat-container:hover .plat {
+  width: calc(100% - 90px);
+}
+main .menu section .plat-container .plat {
+  transform-origin: left;
+  padding: 15px;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+}
+main .menu section .plat-container .plat-1 {
+  animation: load-plat 500ms;
+  animation-delay: 0ms;
+  animation-fill-mode: both;
+}
+main .menu section .plat-container .plat-2 {
+  animation: load-plat 500ms;
+  animation-delay: 500ms;
+  animation-fill-mode: both;
+}
+main .menu section .plat-container .plat-3 {
+  animation: load-plat 500ms;
+  animation-delay: 1000ms;
+  animation-fill-mode: both;
+}
+main .menu section .plat-container .plat-4 {
+  animation: load-plat 500ms;
+  animation-delay: 1500ms;
+  animation-fill-mode: both;
+}
+main .menu section .plat-container .plat-5 {
+  animation: load-plat 500ms;
+  animation-delay: 2000ms;
+  animation-fill-mode: both;
+}
+main .menu section .plat-container .plat-6 {
+  animation: load-plat 500ms;
+  animation-delay: 2500ms;
+  animation-fill-mode: both;
+}
+main .menu section .plat-container .plat-7 {
+  animation: load-plat 500ms;
+  animation-delay: 3000ms;
+  animation-fill-mode: both;
+}
+main .menu section .plat-container .plat-8 {
+  animation: load-plat 500ms;
+  animation-delay: 3500ms;
+  animation-fill-mode: both;
+}
+main .menu section .plat-container .plat-9 {
+  animation: load-plat 500ms;
+  animation-delay: 4000ms;
+  animation-fill-mode: both;
+}
+main .menu section .plat-container .plat-10 {
+  animation: load-plat 500ms;
+  animation-delay: 4500ms;
+  animation-fill-mode: both;
+}
+main .menu section .plat-container .plat .span-1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .menu section .plat-container .plat .span-2 {
   font-weight: 700;
   color: #353535;
-  float: right;
+}
+main .menu section .plat-container .icon-div {
+  height: 70px;
+  width: 59px;
+  margin-right: -59px;
+  transition: 0.5s ease-in-out;
 }
 main .menu .button {
   align-items: center;
