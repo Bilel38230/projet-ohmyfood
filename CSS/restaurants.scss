@@ -24,6 +24,17 @@ svg {
 h2 {
     height: 27px;
     @include txt-format(16px, 300);
+    position: relative;
+
+    &::after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: $green-icon;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    }
 }
 
 h3 {
