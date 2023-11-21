@@ -89,7 +89,7 @@ main .menu h1 {
     margin: auto;
   }
 }
-main .menu h1 .regular-heart:hover + .solid-heart {
+main .menu h1 .regular-heart:active + .solid-heart {
   transform: scale(1);
 }
 main .menu h1 .solid-heart {
