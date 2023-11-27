@@ -122,6 +122,15 @@ main {
                 border-radius: 15px;
                 display: flex;
                 overflow: hidden;
+                transform-origin: left;
+
+                @for $i from 1 through $num-plats {
+                    &-#{$i} {
+                        animation: load-plat $anime-duration;
+                        animation-delay: $anime-duration * calc($i - 1);
+                        animation-fill-mode: both;
+                    }
+                }
 
                 &:hover .icon-div{
                     margin-right: 0;
@@ -132,18 +141,9 @@ main {
                 }
 
                 .plat {
-                    transform-origin: left;
                     padding: 15px;
                     width: 100%;
                     transition: .5s ease-in-out;
-
-                    @for $i from 1 through $num-plats {
-                        &-#{$i} {
-                            animation: load-plat $anime-duration;
-                            animation-delay: $anime-duration * calc($i - 1);
-                            animation-fill-mode: both;
-                        }
-                    }
 
                     .span-1 {
                         white-space: nowrap;
