@@ -266,7 +266,7 @@ svg {
 .restaurants .cards-container .card p {
   margin-left: 16px;
 }
-.restaurants .cards-container .card .regular-heart:active + .solid-heart {
+.restaurants .cards-container .card .regular-heart:hover + .solid-heart {
   transform: scale(1);
 }
 .restaurants .cards-container .card .solid-heart {

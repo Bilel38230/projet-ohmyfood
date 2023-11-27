@@ -20,10 +20,12 @@
 
 @keyframes loading {
     0% {
+        // Démarrage en position négative de 360 deg
         transform: rotateX(-360deg);
     }
 
     70% {
+        // On le fait tourner vers la position 0 deg
         transform: rotateX(0);
     }
 }
@@ -48,6 +50,7 @@ svg {
 }
 
 .loading-container {
+    // L'élément est retiré du flux normal et aucun espace n'est laissé pour l'élément et empêche le défilement
     position: fixed;
     background-image: linear-gradient(to top, $primary-color, $secondary-color);
     height: 100%;
@@ -58,6 +61,8 @@ svg {
     justify-content: center;
     display: flex;
     animation: fadeOut 3s;
+
+    //Prolonge les valeurs finales de l'animation jusqu'à ce que la page soit rechargée ou que le navigateur soit fermé
     animation-fill-mode: forwards;
 
     .loading {
@@ -75,7 +80,8 @@ svg {
             animation: loading 1s infinite;
 
             @for $i from 1 through 8 {
-                &-#{$i} {                 
+                &-#{$i} {
+                    // Retarde le debut de l'animation                 
                     animation-delay: calc($i * 0.1s);
                 }
             }
@@ -243,16 +249,22 @@ svg {
             }
 
             .regular-heart {
-                &:active+.solid-heart {
+                // Utilisation du combinateur d'adjacence + pour créer la transition sur l'élément voisin 
+                &:hover+.solid-heart {
                     transform: scale(1);
                 }
             }
 
             .solid-heart {
                 fill: url(#icon);
+
+                // Permet de déplacer le point d'ancrage où on veut faire partir l'animation
                 transform-origin: top;
+
+                // Permet de modifier la taille d'un élément selon la valeur qu'on lui donne
                 transform: scale(0);
                 transition: transform 300ms ease-in-out;
+                // Fonction de timing = courbe d'accélération de l'animation 
             }
         }
     }

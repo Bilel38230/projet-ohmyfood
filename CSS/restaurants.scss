@@ -101,7 +101,7 @@ main {
             }
 
             .regular-heart {
-                &:active+.solid-heart {
+                &:hover+.solid-heart {
                     transform: scale(1);
                 }
             }
